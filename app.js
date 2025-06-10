@@ -30,14 +30,21 @@ let filme4 = {
     duracao: "1h50m"
 }
 
+let filme5 = {
+    titulo: "Homem-Aranha",
+    foto: "filme5.jpg",
+    avaliacao: "10/10",
+    duracao: "2h01m"
+}
+
 function fnMontarCartao(filmeAtual){
-    console.log(`
+    document.querySelector(".lista-filmes").innerHTML += `
         <div class="card-filme">
             <img src="img/${filmeAtual.foto}">
             <h3>${filmeAtual.titulo}</h3>
             <span>⭐ ${filmeAtual.avaliacao}</span>
         </div>
-        `)
+        `
 }
 
 //DOM 
@@ -46,3 +53,4 @@ fnMontarCartao(filme)
 fnMontarCartao(filme2)
 fnMontarCartao(filme3)
 fnMontarCartao(filme4)
+fnMontarCartao(filme5)
