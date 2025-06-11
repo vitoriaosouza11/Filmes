@@ -47,10 +47,16 @@ function fnMontarCartao(filmeAtual){
         `
 }
 
-//DOM 
+//DOM - Document Object Model
+let todosOsFilmes = [filme, filme2, filme3, filme4, filme5]
+  
+todosOsFilmes.forEach((filmeAtual) => {
+    document.querySelector(".lista-filmes").innerHTML += `
+        <div class="card-filme">
+        <img src="img/${filmeAtual.foto}">
+        <h3>${filmeAtual.titulo}</h3>
+        <span>⭐ ${filmeAtual.avaliacao}</span>
+        </div>
+        `
+})
 
-fnMontarCartao(filme)
-fnMontarCartao(filme2)
-fnMontarCartao(filme3)
-fnMontarCartao(filme4)
-fnMontarCartao(filme5)
